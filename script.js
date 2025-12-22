@@ -43,9 +43,9 @@ function initEmbeddedMessaging() {
             console.log("✅ onEmbeddedMessagingReady");
             setTimeout(() => {
                 if(!isChatOpened){
-                    //const chatBubble = document.querySelector('[data-id="convivaAIChatBubble"]');
-                    //chatBubble.classList.add("unhideContainer");
-                    //chatBubble.classList.remove("hideContainer");
+                    const chatBubble = document.querySelector('[data-id="convivaAIChatBubble"]');
+                    chatBubble.classList.add("unhideContainer");
+                    chatBubble.classList.remove("hideContainer");
                 }
             }, 1500);
         });
