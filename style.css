@@ -107,7 +107,11 @@ body {
   align-items: center;
   justify-content: center;
 }
+.helpMessage{
 
+    padding: 15px 0 10px 0;
+
+}
 .convivaSearchIcon {
   width: 20px;
   height: 20px;
