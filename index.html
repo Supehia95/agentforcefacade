@@ -1,66 +1,103 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <title>My Website</title>
 
-    <!-- Link CSS file -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <body>
-    <div class="hideContainer" data-id="convivaAIChatWindow">
-      <div class="convivaAIChatWindow">
-        <div class="convivaAIChatHeader">
-          <div>
-            <span>Conviva.AI(beta)</span>
-            <button class="convivaAIChatHeaderMinimizeButton" onclick="doMinimizeConvivaAIChatWindow()"><i class="fa fa-window-minimize"></i></button>
-          </div>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <title>My Website</title>
+
+  <!-- Link CSS file -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="hideContainer" data-id="convivaAIChatWindow">
+    <div class="convivaAIChatWindow">
+      <div class="convivaAIChatHeader">
+        <div>
+          <span>Conviva.AI(beta)</span>
+          <button class="convivaAIChatHeaderMinimizeButton" onclick="doMinimizeConvivaAIChatWindow()"><i
+              class="fa fa-window-minimize"></i></button>
         </div>
+      </div>
+      <div class="quickChatContainer" data-id="quickChatContainer">
         <div class="convivaWelcomeBanner">
-          <p>Hello! I am Conviva.AI(beta), an AI assistant designed to help you find the best solutions for your business needs.</p>
-         
+          <p>Hello! I am Conviva.AI(beta), an AI assistant designed to help you find the best solutions for your
+            business needs.</p>
+
           <p class="helpMessage">How can I help you today?</p>
         </div>
         <div class="convivaButtonInputContainer">
           <div class="convivaButtonContainer">
             <button type="button" class="convivaButton" onclick="onTalkToSales()">Talk to sales</button>
             <button type="button" class="convivaButton" onclick="onShowMeAConvivaDemo()">Show me a Conviva demo</button>
-            <button type="button" class="convivaButton" onclick="onHowCanConvivaHelpMyBusiness()">How can Conviva help my business</button>
-            <button type="button" class="convivaButton" onclick="onINeedTechnicalSupport()">I need technical support</button>
+            <button type="button" class="convivaButton" onclick="onHowCanConvivaHelpMyBusiness()">How can Conviva help
+              my business</button>
+            <button type="button" class="convivaButton" onclick="onINeedTechnicalSupport()">I need technical
+              support</button>
           </div>
-        
+
         </div>
-         <div class="convivaSearchInput">
-          <input 
-            type="text" 
-            id="convivaChatInput" 
-            class="convivaSearch" 
-            placeholder="Start a new chat..." 
-            aria-description="Press enter to send" 
-            aria-disabled="false" 
-            name="searchInput"
-          >
+        <div class="convivaSearchInput">
+          <input type="text" id="convivaChatInput" class="convivaSearch" placeholder="Start a new chat..."
+            aria-description="Press enter to send" aria-disabled="false" name="searchInput">
           <button class="convivaSearchBtn" aria-label="Send message">
             <div class="convivaSearchIcon"></div>
           </button>
         </div>
         <div class="convivaChatDisclaimer">
           <p>
-            You’re chatting with our AI-powered agent.  By continuing, you agree that any chats, including any personal information entered, are subject to our <a href="https://www.conviva.ai/legal/#Privacy-Policy">Privacy Policy</a> and may be recorded and shared with our service providers so we can better assist you and used for marketing purposes.
+            You’re chatting with our AI-powered agent. By continuing, you agree that any chats, including any personal
+            information entered, are subject to our <a href="https://www.conviva.ai/legal/#Privacy-Policy">Privacy
+              Policy</a> and may be recorded and shared with our service providers so we can better assist you and used
+            for marketing purposes.
           </p>
         </div>
       </div>
-    </div>
-    <div class="hideContainer" data-id="convivaAIChatBubble" onclick="doOpenConvivaAIChatWindow()">
-      <div class="convivaAIChatBubble">
-        Ask Conviva AI
+      <div class="quickChatLoadContainer" data-id="quickChatLoadContainer">
+        <div class="skeleton-message-group">
+          <div class="skeleton skeleton-avatar"></div>
+          <div class="skeleton-message-content">
+            <div class="skeleton skeleton-line full"></div>
+            <div class="skeleton skeleton-line long"></div>
+            <div class="skeleton skeleton-line medium"></div>
+          </div>
+        </div>
+
+        <div class="skeleton-message-group">
+          <div class="skeleton skeleton-avatar"></div>
+          <div class="skeleton-message-content">
+            <div class="skeleton skeleton-line full"></div>
+            <div class="skeleton skeleton-line short"></div>
+          </div>
+        </div>
+
+        <div class="skeleton-message-group">
+          <div class="skeleton skeleton-avatar"></div>
+          <div class="skeleton-message-content">
+            <div class="skeleton skeleton-line long"></div>
+          </div>
+        </div>
+
+        <div style="margin-top: 130px; padding-top: 10px; border-top: 1px solid #eee;">
+          <div class="skeleton skeleton-line full" style="height: 36px;"></div>
+        </div>
+
       </div>
     </div>
-    
+  </div>
+  <div class="hideContainer" data-id="convivaAIChatBubble" onclick="doOpenConvivaAIChatWindow()">
+    <div class="convivaAIChatBubble">
+      Ask Conviva AI
+    </div>
+  </div>
 
-    <!-- Link JS file -->
-    <script src="script.js"></script>
-    <script type='text/javascript' src='https://convivareimagined--partialsb.sandbox.my.site.com/ESWConvivaSandeepDemo1766433506241/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
-  </body>
+
+  <!-- Link JS file -->
+  <script src="script.js"></script>
+  <script type='text/javascript'
+    src='https://convivareimagined--partialsb.sandbox.my.site.com/ESWConvivaSandeepDemo1766433506241/assets/js/bootstrap.min.js'
+    onload='initEmbeddedMessaging()'></script>
+</body>
+
 </html>
