@@ -14,8 +14,8 @@ function initEmbeddedMessaging() {
         embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
         embeddedservice_bootstrap.init(
             '00DVA000008Fuc9',
-            'Conviva_Messaging_Channel',
-            'https://convivareimagined--partialsb.sandbox.my.site.com/ESWConvivaMessagingChan1765182896774',
+            'ConvivaSandeepDemo',
+            'https://convivareimagined--partialsb.sandbox.my.site.com/ESWConvivaSandeepDemo1766433506241',
             {
                 scrt2URL: 'https://convivareimagined--partialsb.sandbox.my.salesforce-scrt.com'
             }
