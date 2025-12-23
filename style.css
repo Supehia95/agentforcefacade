@@ -189,6 +189,12 @@ body {
       .skeleton-chat-line:last-child {
         margin-bottom: 0;
       }
+
+.skeleton-search-group{
+    margin-top: 190px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
 .hideQuickContainer{
 display:none !important;
 }
