@@ -27,12 +27,12 @@ function initEmbeddedMessaging() {
         window.addEventListener('onEmbeddedMessageSent', function (event) {
             console.log("✅ onEmbeddedMessageSent");
             messageSentCount++;
-              const chatWindow = document.querySelector('[data-id="convivaAIChatWindow"]');
-            chatWindow.classList.add("hideContainer");
-            chatWindow.classList.remove("unhideContainer");
+             
             if(messageSentCount>=2){
                botreplied = true;
-           
+                const chatWindow = document.querySelector('[data-id="convivaAIChatWindow"]');
+                chatWindow.classList.add("hideContainer");
+                chatWindow.classList.remove("unhideContainer");
             }
         });
           window.addEventListener('onEmbeddedMessagingConversationParticipantChanged', function (event) {
