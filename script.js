@@ -13,8 +13,24 @@ document.getElementById("convivaChatInput").addEventListener("keydown", function
         }
     }
 });
+
+function pushPrechatFields() {
+    try {
+      if (window.embeddedservice_bootstrap?.prechatAPI?.setHiddenPrechatFields) {
+       
+        const preChatFields = {"url": window.location.href}
+         console.log("📨 Prechat fields sent:", preChatFields);
+        embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields(preChatFields);
+      }
+    } catch (e) {
+      console.warn("Prechat push failed:", e);
+    }
+}
+
+
 function initEmbeddedMessaging() {
     try {
+        
         embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
         embeddedservice_bootstrap.init(
             '00DVA000008Fuc9',
@@ -49,6 +65,7 @@ function initEmbeddedMessaging() {
                     chatBubble.classList.remove("hideContainer");
                 }
             }, 1500);
+            pushPrechatFields();
         });
         window.addEventListener('onEmbeddedMessagingConversationStarted', function (event) {
             console.log("✅ onEmbeddedMessagingConversationStarted");
