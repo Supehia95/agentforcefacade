@@ -5,7 +5,7 @@ body {
 .convivaAIChatWindow {
     width: 400px;
     height: 510px;
-    position: absolute;
+    position: fixed;
     bottom: 10px;
     right: 29px;
     border-radius: 9px 9px 0px 0px;
@@ -60,7 +60,7 @@ body {
     align-items: flex-start; 
     padding: 15px; 
     gap: 10px; 
-    position: absolute; 
+    position: fixed; 
     bottom: 10px; 
     background: linear-gradient(96.06deg, #417D0C 13.45%, #9CDC00 128%), #9CDC00; 
     box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -1px rgba(0, 0, 0, 0.06); 
