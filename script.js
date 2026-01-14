@@ -44,7 +44,7 @@ function initEmbeddedMessaging() {
             console.log("✅ onEmbeddedMessageSent");
             messageSentCount++;
              
-            if(messageSentCount>=2){
+            if(messageSentCount>=1){
                botreplied = true;
                 const chatWindow = document.querySelector('[data-id="convivaAIChatWindow"]');
                 chatWindow.classList.add("hideContainer");
