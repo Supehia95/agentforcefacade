@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     color: #FFFFFF;
 }
-.convivaAIChatWindow {
+.AfFacadeAIChatWindow {
     width: 400px;
     height: 510px;
     position: fixed;
@@ -11,25 +11,25 @@ body {
     border-radius: 9px 9px 0px 0px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.convivaAIChatHeader {
+.AfFacadeAIChatHeader {
     padding: 15px 20px;
     background-color: #6da927;
     border-radius: 9px 9px 0px 0px;
 }
-.convivaAIChatHeaderMinimizeButton {
+.AfFacadeAIChatHeaderMinimizeButton {
     border: 0px; 
     background-color: #6da927;
     float: right;
     color: #FFFFFF;
 }
-.convivaWelcomeBanner {
-    background-image: url('./assets/convivaBackground.png');
+.AfFacadeWelcomeBanner {
+    background-image: url('./assets/AfFacadeBackground.png');
     background-repeat: no-repeat;
     height: 135px;
     padding: 5px 20px;
     background-size: cover;
 }
-.convivaButton {
+.afFacadeButton {
    background-color: #FFFFFF;
     border-radius: 3px;
     border: 1px solid #9cdc00;
@@ -38,15 +38,15 @@ body {
     margin: 5px 2.5px;
     cursor: pointer;
 }
-.convivaButtonInputContainer{
+.afFacadeButtonInputContainer{
    padding: 20px;
     height: 150px;
 }
-.convivaButtonContainer {
+.afFacadeButtonContainer {
     text-align: right;
 }
 
-.convivaSearch {
+.AfFacadeSearch {
     height: 25px;
     flex: 1;
     padding: 5px 35px 5px 15px;
@@ -54,7 +54,7 @@ body {
     font-size: 14px;
     outline: none;
 }
-.convivaAIChatBubble{
+.AfFacadeAIChatBubble{
     display: flex; 
     flex-direction: column; 
     align-items: flex-start; 
@@ -80,23 +80,23 @@ body {
     visibility: hidden;
 }
 
-.convivaSearchInput {
+.AfFacadeSearchInput {
     display: flex;
     align-items: center;
     padding: 0 20px;
 }
-.convivaChatDisclaimer p{
+.AfFacadeChatDisclaimer p{
     
     color: black;
     font-size: 11px;
     padding: 5px 20px;
 }
-.convivaSearch:focus {
+.AfFacadeSearch:focus {
   border-color: #007bff;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
 }
 
-.convivaSearchBtn {
+.AfFacadeSearchBtn {
   position: absolute;
   right: 25px;
   background: none;
@@ -112,10 +112,10 @@ body {
     padding: 0px 0 10px 0;
 
 }
-.convivaSearchIcon {
+.AfFacadeSearchIcon {
   width: 20px;
   height: 20px;
-  background-image: url('https://supehia95.github.io/convivasandboxcopy/assets/PaperPlaneTilt.png');
+  background-image: url('https://supehia95.github.io/AfFacadesandboxcopy/assets/PaperPlaneTilt.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -201,7 +201,7 @@ display:none !important;
 .quickChatLoadContainer{
     padding:20px;
 }
-.convivaSearchBtn:hover {
+.AfFacadeSearchBtn:hover {
   opacity: 0.7;
   transition: opacity 0.2s;
 }
