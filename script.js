@@ -46,9 +46,7 @@ function initEmbeddedMessaging() {
              
             if(messageSentCount>=1){
                botreplied = true;
-                const chatWindow = document.querySelector('[data-id="AfFacadeAIChatWindow"]');
-                chatWindow.classList.add("hideContainer");
-                chatWindow.classList.remove("unhideContainer");
+             
             }
         });
           window.addEventListener('onEmbeddedMessagingConversationParticipantChanged', function (event) {
@@ -81,6 +79,9 @@ function initEmbeddedMessaging() {
         window.addEventListener('onEmbeddedMessagingConversationOpened', function (event) {
             console.log("✅ onEmbeddedMessagingConversationOpened");
             isChatOpened = true;
+               const chatWindow = document.querySelector('[data-id="AfFacadeAIChatWindow"]');
+                chatWindow.classList.add("hideContainer");
+                chatWindow.classList.remove("unhideContainer");
             //const chatBubble = document.querySelector('[data-id="AfFacadeAIChatBubble"]');
             //chatBubble.classList.add("hideContainer");
             //chatBubble.classList.remove("unhideContainer");
