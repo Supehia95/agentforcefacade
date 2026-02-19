@@ -33,13 +33,13 @@ function initEmbeddedMessaging() {
         
         embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
         embeddedservice_bootstrap.init(
-            '00DVA000008Fuc9',
-            'ConvivaSandeepDemo',
-            'https://convivareimagined--partialsb.sandbox.my.site.com/ESWConvivaSandeepDemo1766433506241',
-            {
-                scrt2URL: 'https://convivareimagined--partialsb.sandbox.my.salesforce-scrt.com'
-            }
-        );
+				'00DKj00000UY7YZ',
+				'agentforcefacade',
+				'https://tr1755503902062.my.site.com/ESWagentforcefacade1771516498152',
+				{
+					scrt2URL: 'https://tr1755503902062.my.salesforce-scrt.com'
+				}
+			);
         window.addEventListener('onEmbeddedMessageSent', function (event) {
             console.log("✅ onEmbeddedMessageSent");
             messageSentCount++;
