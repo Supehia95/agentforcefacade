@@ -60,7 +60,7 @@ function initEmbeddedMessaging() {
             console.log("✅ onEmbeddedMessagingReady");
             setTimeout(() => {
                 if(!isChatOpened){
-                    const chatBubble = document.querySelector('[data-id="AfFacadeChatBubble"]');
+                    const chatBubble = document.querySelector('[data-id="AfFacadeAIChatBubble"]');
                     chatBubble.classList.add("unhideContainer");
                     chatBubble.classList.remove("hideContainer");
                 }
