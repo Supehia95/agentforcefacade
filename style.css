@@ -40,11 +40,16 @@ body {
     cursor: pointer;
 }
 .afFacadeButtonInputContainer{
-   padding: 20px;
+    padding: 20px;
     height: 150px;
+    position: relative;
 }
 .afFacadeButtonContainer {
     text-align: right;
+    padding: 0 19px;
+    vertical-align: bottom;
+    position: absolute;
+    bottom: 10px;
 }
 
 .AfFacadeSearch {
