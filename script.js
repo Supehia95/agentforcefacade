@@ -4,7 +4,7 @@ let botloaded = false;
 let botreplied = false;
 let messageSentCount = 0;
 
-document.getElementById("convivaChatInput").addEventListener("keydown", function (e) {
+document.getElementById("AfFacadeChatInput").addEventListener("keydown", function (e) {
     if (e.key === "Enter") {
         message = e.target.value;
         if(message){
@@ -46,7 +46,7 @@ function initEmbeddedMessaging() {
              
             if(messageSentCount>=1){
                botreplied = true;
-                const chatWindow = document.querySelector('[data-id="convivaAIChatWindow"]');
+                const chatWindow = document.querySelector('[data-id="AfFacadeAIChatWindow"]');
                 chatWindow.classList.add("hideContainer");
                 chatWindow.classList.remove("unhideContainer");
             }
@@ -60,7 +60,7 @@ function initEmbeddedMessaging() {
             console.log("✅ onEmbeddedMessagingReady");
             setTimeout(() => {
                 if(!isChatOpened){
-                    const chatBubble = document.querySelector('[data-id="convivaAIChatBubble"]');
+                    const chatBubble = document.querySelector('[data-id="AfFacadeChatBubble"]');
                     chatBubble.classList.add("unhideContainer");
                     chatBubble.classList.remove("hideContainer");
                 }
@@ -69,7 +69,7 @@ function initEmbeddedMessaging() {
         });
         window.addEventListener('onEmbeddedMessagingConversationStarted', function (event) {
             console.log("✅ onEmbeddedMessagingConversationStarted");
-           // const chatWindow = document.querySelector('[data-id="convivaAIChatWindow"]');
+           // const chatWindow = document.querySelector('[data-id="AfFacadeAIChatWindow"]');
            // chatWindow.classList.add("hideContainer");
             //chatWindow.classList.remove("unhideContainer");
         });
@@ -81,7 +81,7 @@ function initEmbeddedMessaging() {
         window.addEventListener('onEmbeddedMessagingConversationOpened', function (event) {
             console.log("✅ onEmbeddedMessagingConversationOpened");
             isChatOpened = true;
-            //const chatBubble = document.querySelector('[data-id="convivaAIChatBubble"]');
+            //const chatBubble = document.querySelector('[data-id="AfFacadeAIChatBubble"]');
             //chatBubble.classList.add("hideContainer");
             //chatBubble.classList.remove("unhideContainer");
         });
@@ -100,19 +100,19 @@ function initEmbeddedMessaging() {
         console.error('Error loading Embedded Messaging: ', err);
     }
 };
-function doOpenConvivaAIChatWindow() {
-    const chatBubble = document.querySelector('[data-id="convivaAIChatBubble"]');
+function doOpenAfFacadeAIChatWindow() {
+    const chatBubble = document.querySelector('[data-id="AfFacadeAIChatBubble"]');
     chatBubble.classList.add("hideContainer");
     chatBubble.classList.remove("unhideContainer");
-    const chatWindow = document.querySelector('[data-id="convivaAIChatWindow"]');
+    const chatWindow = document.querySelector('[data-id="AfFacadeAIChatWindow"]');
     chatWindow.classList.add("unhideContainer");
     chatWindow.classList.remove("hideContainer");
 }
-function doMinimizeConvivaAIChatWindow() {
-    const chatBubble = document.querySelector('[data-id="convivaAIChatBubble"]');
+function doMinimizeAfFacadeAIChatWindow() {
+    const chatBubble = document.querySelector('[data-id="AfFacadeAIChatBubble"]');
     chatBubble.classList.add("unhideContainer");
     chatBubble.classList.remove("hideContainer");
-    const chatWindow = document.querySelector('[data-id="convivaAIChatWindow"]');
+    const chatWindow = document.querySelector('[data-id="AfFacadeAIChatWindow"]');
     chatWindow.classList.add("hideContainer");
     chatWindow.classList.remove("unhideContainer");
 }
@@ -120,12 +120,12 @@ function onTalkToSales(){
     message = 'Talk to sales';
     doCallAgentforce();
 }
-function onShowMeAConvivaDemo(){
-    message = 'Show me a Conviva demo';
+function onShowMeAAfFacadeDemo(){
+    message = 'Show me a demo';
     doCallAgentforce();
 }
-function onHowCanConvivaHelpMyBusiness(){
-    message = 'How can Conviva help my business';
+function onHowCanAfFacadeHelpMyBusiness(){
+    message = 'How can you help my business';
     doCallAgentforce();
 }
 function onINeedTechnicalSupport(){
