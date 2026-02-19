@@ -126,7 +126,7 @@ function onShowMeAAfFacadeDemo(){
     doCallAgentforce();
 }
 function onHowCanAfFacadeHelpMyBusiness(){
-    message = 'How can you help my business';
+    message = 'Continue last chat';
     doCallAgentforce();
 }
 function onINeedTechnicalSupport(){
