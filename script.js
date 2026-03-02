@@ -30,7 +30,20 @@ function pushPrechatFields() {
 
 function initEmbeddedMessaging() {
     try {
-        
+		// Close button
+			document.getElementById("closeModal").onclick = function() {
+			document.getElementById("schedulerModal").style.display = "none";
+			document.getElementById("schedulerFrame").src = ""; // optional reset
+		};
+
+		// Close if user clicks outside modal
+		window.onclick = function(event) {
+			const modal = document.getElementById("schedulerModal");
+			if (event.target === modal) {
+				modal.style.display = "none";
+				document.getElementById("schedulerFrame").src = "";
+			}
+		};
         embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
         embeddedservice_bootstrap.init(
 				'00DKj00000UY7YZ',
@@ -57,6 +70,9 @@ function initEmbeddedMessaging() {
 						
 						if (match) {
 							const fullUrl = match[0];
+							const modal = document.getElementById("schedulerModal");
+							modal.style.display = "block";
+
 							document.getElementById("schedulerFrame").src=fullUrl;
  							console.log("Extracted Zoom URL:", fullUrl);
 						}
@@ -127,6 +143,7 @@ function initEmbeddedMessaging() {
     } catch (err) {
         console.error('Error loading Embedded Messaging: ', err);
     }
+	
 };
 function doOpenAfFacadeAIChatWindow() {
     const chatBubble = document.querySelector('[data-id="AfFacadeAIChatBubble"]');
