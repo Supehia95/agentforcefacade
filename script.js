@@ -47,8 +47,7 @@ function initEmbeddedMessaging() {
 			   event.detail.conversationEntry.senderDisplayName =='Guest'){
 				var v = JSON.parse(event.detail.conversationEntry.entryPayload);
 				var messageHtml = v.abstractMessage.staticContent.text;
-				if(messageHtml.includes('https://scheduler.zoom.us'){
-					if (messageHtml.includes("https://scheduler.zoom.us")) {
+ 					if (messageHtml.includes("https://scheduler.zoom.us")) {
 					
 						// Convert string → DOM
 						const parser = new DOMParser();
@@ -65,7 +64,7 @@ function initEmbeddedMessaging() {
 						}
 					}
 				}
-			}
+			
             if(messageSentCount>=1){
                botreplied = true;
              
