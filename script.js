@@ -60,6 +60,8 @@ function initEmbeddedMessaging() {
 						if (link) {
 							const fullUrl = link.href;
 							console.log("Extracted URL:", fullUrl);
+							  document.getElementById("schedulerFrame").src=fullUrl;
+
 						}
 					}
 				}
