@@ -21,6 +21,7 @@ body {
     max-width: 900px;
     border-radius: 8px;
     position: relative;
+    height: 600px;
 }
 
 #closeModal {
