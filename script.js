@@ -43,7 +43,27 @@ function initEmbeddedMessaging() {
         window.addEventListener('onEmbeddedMessageSent', function (event) {
             console.log("✅ onEmbeddedMessageSent",event);
             messageSentCount++;
-             
+			if ( event && event.detail && event.detail.conversationEntry && event.detail.conversationEntry.entryPayload &&
+			   event.detail.conversationEntry.senderDisplayName =='Guest'){
+				var v = JSON.parse(event.detail.conversationEntry.entryPayload);
+				var messageHtml = v.abstractMessage.staticContent.text;
+				if(messageHtml.includes('https://scheduler.zoom.us'){
+					if (messageHtml.includes("https://scheduler.zoom.us")) {
+					
+						// Convert string → DOM
+						const parser = new DOMParser();
+						const doc = parser.parseFromString(messageHtml, "text/html");
+						
+						// Find matching link
+						const link = doc.querySelector('a[href*="https://scheduler.zoom.us"]');
+						
+						if (link) {
+							const fullUrl = link.href;
+							console.log("Extracted URL:", fullUrl);
+						}
+					}
+				}
+			}
             if(messageSentCount>=1){
                botreplied = true;
              
