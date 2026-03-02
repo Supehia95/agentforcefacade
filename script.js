@@ -51,7 +51,7 @@ function initEmbeddedMessaging() {
 					
 
 						// Match Zoom scheduler link inside markdown
-						const match = messageText.match(
+						const match = messageHtml.match(
 							/https:\/\/scheduler\.zoom\.us\/[^\s)]+/
 						);
 						
