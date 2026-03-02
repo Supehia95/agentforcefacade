@@ -2,6 +2,34 @@ body {
     font-family: Arial, sans-serif;
     color: #FFFFFF;
 }
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background: white;
+    margin: 5% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 8px;
+    position: relative;
+}
+
+#closeModal {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
 iframe{width:100%;height:100%;border:none}
 
 .AfFacadeAIChatWindow {
