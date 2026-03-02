@@ -41,7 +41,7 @@ function initEmbeddedMessaging() {
 				}
 			);
         window.addEventListener('onEmbeddedMessageSent', function (event) {
-            console.log("✅ onEmbeddedMessageSent");
+            console.log("✅ onEmbeddedMessageSent",event);
             messageSentCount++;
              
             if(messageSentCount>=1){
@@ -97,6 +97,12 @@ function initEmbeddedMessaging() {
             quickChatLoadContainer.classList.add("hideQuickContainer");
             
         });
+
+		 window.addEventListener('onEmbeddedMessageLinkClicked', function (event) {
+                        console.log("✅onEmbeddedMessageLinkClicked",event);
+        });
+		
+
     } catch (err) {
         console.error('Error loading Embedded Messaging: ', err);
     }
