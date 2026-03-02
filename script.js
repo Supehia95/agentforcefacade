@@ -44,7 +44,7 @@ function initEmbeddedMessaging() {
             console.log("✅ onEmbeddedMessageSent",event);
             messageSentCount++;
 			if ( event && event.detail && event.detail.conversationEntry && event.detail.conversationEntry.entryPayload &&
-			   event.detail.conversationEntry.senderDisplayName =='Guest'){
+			   event.detail.conversationEntry.senderDisplayName !='Guest'){
 				var v = JSON.parse(event.detail.conversationEntry.entryPayload);
 				var messageHtml = v.abstractMessage.staticContent.text;
  					if (messageHtml.includes("https://scheduler.zoom.us")) {
