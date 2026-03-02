@@ -49,19 +49,19 @@ function initEmbeddedMessaging() {
 				var messageHtml = v.abstractMessage.staticContent.text;
  					if (messageHtml.includes("https://scheduler.zoom.us")) {
 					
-						// Convert string → DOM
-						const parser = new DOMParser();
-						const doc = parser.parseFromString(messageHtml, "text/html");
-						
-						// Find matching link
-						const link = doc.querySelector('a[href*="https://scheduler.zoom.us"]');
-						
-						if (link) {
-							const fullUrl = link.href;
-							console.log("Extracted URL:", fullUrl);
-							  document.getElementById("schedulerFrame").src=fullUrl;
 
+						// Match Zoom scheduler link inside markdown
+						const match = messageText.match(
+							/https:\/\/scheduler\.zoom\.us\/[^\s)]+/
+						);
+						
+						if (match) {
+							const fullUrl = match[0];
+							document.getElementById("schedulerFrame").src=fullUrl;
+ 							console.log("Extracted Zoom URL:", fullUrl);
 						}
+						
+						
 					}
 				}
 			
